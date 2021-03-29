@@ -1,28 +1,38 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Number from './Number/Number';
+import Header from './Header/Header';
 import './App.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const containerLayout = {
-    span: 8,
-    offset: 2,
+  
+  const props = {
+    md: {
+      span: 10,
+      offset: 1,
+    },
+    xs: {
+      span: 8,
+      offset: 2,
+    },
+    lg: {
+      span: 10,
+      offset: 1,
+    },
   };
-  return (
-    <div className="body">
-      <Container fluid>
-        <Row>
-          <Col md={containerLayout} xs={containerLayout} lg={containerLayout} className="header">
-            <span>Guest Number</span>
-          </Col>
-          <Col md={containerLayout} xs={containerLayout} lg={containerLayout} className="number">
-            <Number />
-          </Col>
-        </Row>
 
-      </Container>
-    </div>
+  return (
+    <Container className="container-page">
+      <Row>
+        <Col { ...props } className="header">
+          <Header />
+        </Col>
+        <Col { ...props } className="number">
+          <Number />
+        </Col>
+      </Row>
+
+    </Container>
   );
 }
 
