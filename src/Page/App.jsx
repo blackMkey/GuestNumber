@@ -5,7 +5,7 @@ import Header from './Header/Header';
 import './App.scss';
 
 function App() {
-  
+
   const props = {
     md: {
       span: 10,
