@@ -1,8 +1,16 @@
 import React from 'react';
+
 import { Container, Row, Col } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
 import Number from './Number/Number';
 import Header from './Header/Header';
-import './App.scss';
+import CountNumber from './CountNumber/CountNumber';
+import './Style/App.scss';
 
 function App() {
 
@@ -22,17 +30,25 @@ function App() {
   };
 
   return (
-    <Container className="container-page">
-      <Row>
-        <Col { ...props } className="header">
-          <Header />
-        </Col>
-        <Col { ...props } className="number">
-          <Number />
-        </Col>
-      </Row>
-
-    </Container>
+    <Router>
+      <Container className="container-page">
+        <Row>
+          <Col { ...props } className="header">
+            <Header />
+          </Col>
+          <Col { ...props } className="number">
+            <Switch>
+              <Route exact path="/">
+                <Number />
+              </Route>
+              <Route path="/count">
+                <CountNumber />
+              </Route>
+            </Switch>
+          </Col>
+        </Row>
+      </Container>
+    </Router>
   );
 }
 

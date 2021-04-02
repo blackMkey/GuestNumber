@@ -1,0 +1,76 @@
+.number-component{
+    .number-container{
+        width: 100%;
+        min-height: 233px;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        display: inline-block;
+    }
+    .button-block {
+        height: 89px;
+        width: 89px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(87, 87, 87, 0.6) !important;
+        font-size: 2rem !important;
+    }
+    .description {
+        margin: 34px 21px;
+        font-size: 21px;
+        font-style: oblique;
+    }
+}
+.count-number{
+    .description {
+        margin: 34px 21px;
+        font-size: 21px;
+        font-style: oblique;
+    }
+    .low-point {
+        color: black;
+        text-shadow: 0px 0px 10px rgba(175, 175, 175, 0.7);
+        font-size: 2rem;
+    }
+    .medium-point {
+        color: olive;
+        text-shadow: 0px 0px 15px rgba(228, 241, 35, 0.7);
+        font-size: 2rem !important;
+        transition-duration: 1s;
+    }
+    .hight-point {
+        color: orangered;
+        text-shadow: 0px 0px 15px rgba(240, 29, 29, 0.7);
+        font-size: 3rem !important;
+        transition-duration: 1s;
+    }
+    .super-point{
+        color: rebeccapurple;
+        text-shadow: 0px 0px 15px rgba(248, 46, 255, 0.7);
+        font-size: 4rem !important;
+        transition-duration: 1s;  
+    }
+    .point{
+        text-align: center;
+        margin: 10px;
+        font-size: 2rem;
+        font-style: oblique;
+        font-weight: 900;
+    }
+    .number-container{
+        width: 100%;
+        min-height: 233px;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        display: inline-block;
+    }
+    .button-block {
+        height: 1rem;
+        width: 89px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(87, 87, 87, 0.6) !important;
+        font-size: 2rem !important;
+    }
+}
