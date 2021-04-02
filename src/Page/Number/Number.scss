@@ -1,18 +1,18 @@
 .number-container{
     width: 100%;
-    margin: 50px 0px;
+    min-height: 233px;
     padding: 0;
     position: relative;
-}
-.number-container p {
-    margin: 30px 30px;
+    text-align: center;
+    display: inline-block;
 }
 .button-block {
-    height: 90px;
-    width: 90px;
+    height: 89px;
+    width: 89px;
     margin-right: 10px;
     margin-bottom: 10px;
     border: 1px solid rgba(87, 87, 87, 0.6) !important;
+    font-size: 2rem !important;
 }
 .description {
     margin: 34px 21px;

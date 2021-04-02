@@ -10,7 +10,13 @@ const Number = () => {
   const getRandomNumber = () => Math.ceil(Math.random() * count);
   let randomNumber = getRandomNumber();
 
-  const startAgain = () => {
+  const startAgain = (event) => {
+    setStop(true);
+    event.target.className = 'button-block btn btn-danger';
+    setTimeout(() => {
+      setStop(false);
+      event.target.className = 'button-block btn btn-light';
+    }, 500);
     setCount(2);
     randomNumber = getRandomNumber();
   };
@@ -26,7 +32,7 @@ const Number = () => {
   };
 
   const handleClick = (event) => {
-    !stop && parseInt(event.target.value, 10) === randomNumber ? nextlevel(event) : startAgain();
+    !stop && parseInt(event.target.value, 10) === randomNumber ? nextlevel(event) : startAgain(event);
   };
 
   for (let i = 1; i <= count; i += 1) {

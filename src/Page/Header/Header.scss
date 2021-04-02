@@ -1,9 +1,12 @@
-.nav{
+.nav-container {
     height: 89px;
-    span {
-        color: #f53b57;
-        font-size: 34px;
-        font-weight: 300;
-        line-height: 40px;
-    }
+}
+.nav-brand {
+    color: #f53b57 !important;
+    font-size: 34px !important;
+    font-weight: 300;
+    align-self: flex-end;
+}
+.nav-link-right {
+    align-self: flex-end;
 }

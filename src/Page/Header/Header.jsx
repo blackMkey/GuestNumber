@@ -1,14 +1,19 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import './Header.scss';
 
 const Header = () => {
 
   return (
-    <Navbar className="nav" expand="lg" >
-      <Container>
-        <Navbar.Brand href="/"><span>Guest Number</span></Navbar.Brand>
-      </Container>
+    <Navbar bg="light" variant="light" className="nav-container">
+      <Navbar.Brand href="/" className="nav-brand">Guess Number</Navbar.Brand>
+      <Navbar.Collapse className="justify-content-end nav-link-right" >
+        <Nav>
+          <Nav.Link href="/">Find Number</Nav.Link>
+          <Nav.Link href="#">/</Nav.Link>
+          <Nav.Link href="/count">Count Lucky</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 };
