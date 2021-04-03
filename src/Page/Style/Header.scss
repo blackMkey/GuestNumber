@@ -1,5 +1,23 @@
 .nav-container {
     height: 89px;
+    .dropdown {
+        text-align: right;
+    }
+    .dropdown button{
+        background-color: white;
+        color: #3f3f3f;
+        border-color: #030303;
+        margin-bottom: 10px;
+        box-shadow: none;
+        &:focus,
+        &:hover {
+            background-color: white !important;
+            color: #3f3f3f !important;
+            border-color: #030303 !important;
+            margin-bottom: 10px;
+            box-shadow: none !important;
+        }
+    }
 }
 .nav-brand {
     color: #f53b57 !important;
@@ -9,4 +27,10 @@
 }
 .nav-link-right {
     align-self: flex-end;
+    flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+    .nav-brand {
+        font-size: 24px !important;
+    }
 }

@@ -1,28 +1,21 @@
-import React, { useState, useEffect, memo } from 'react';
+import { useState, useEffect } from 'react';
 
-const WindowDimensions = memo(() => {
-  const [width, setWidth] = useState(window.innerWidth);
-  let size ='';
-
-  if(width >= 992 && size !== 'lg'){
-    console.log('1111');
-    size = 'lg';
-  }
-  else if(width>=768 && size !== 'md'){
-    console.log('22222');
-    size = 'sm';
-  }
-  else if(size !== 'sm'){
-    console.log('3');
-    size = 'sm';
-  }
-  window.addEventListener('resize', () => {
-    setWidth(window.innerWidth);
-  });
-  useEffect(()=>{
-    console.log('44444');
+export const WindowDimensions = () => {
+    const [size, setSize] = useState('');
+    useEffect(() => {
+        const handleResize = () => {
+            if(window.innerWidth >= 768 && size !== 'lg'){
+                setSize('lg');
+            }
+            else if(window.innerWidth < 768 && window.innerWidth>=576 && size !== 'md'){
+                setSize('md');
+            }
+            else if(window.innerWidth<576 && size !== 'sm'){
+                setSize('sm');
+            }
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+    }, [size]);
     return size;
-  },[size]);
-
-});
-export default WindowDimensions;
+};
