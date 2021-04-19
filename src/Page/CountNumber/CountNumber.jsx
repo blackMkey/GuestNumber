@@ -7,7 +7,6 @@ const CountNumber = ()=> {
     const [count, setCount] = useState(0);
     const [stop, setStop] = useState(false);
     const getRandomNumber = () => Math.ceil(Math.random() * 2);
-    let randomNumber = getRandomNumber();
 
     const startAgain = (event) => {
         setStop(true);
@@ -16,7 +15,6 @@ const CountNumber = ()=> {
             setStop(false);
             event.target.className = 'button-block btn btn-light';
             setCount(0);
-            randomNumber = getRandomNumber();
         }, 500);
 
     };
@@ -32,7 +30,7 @@ const CountNumber = ()=> {
     };
 
     const handleClick = (event) => {
-        !stop && parseInt(event.target.value, 10) === randomNumber ? nextlevel(event) : startAgain(event);
+        !stop && parseInt(event.target.value, 10) === getRandomNumber() ? nextlevel(event) : startAgain(event);
     };
     const stylePoint = count <=3 ? 'low-point' : count <=5 ? 'medium-point' : count <=8 ? 'hight-point': 'super-point';
     return (
